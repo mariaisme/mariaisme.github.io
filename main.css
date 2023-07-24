@@ -1,14 +1,18 @@
-﻿*{
+
+
+
+
+*{
 box-sizing: border-box;
 margin:0;
-margin-left:5%;
-margin-right:5%;
 padding:0;
 font-family:"Montserrat","Helvetica","sans-serif";
 }
 
 body
-{	
+{
+margin-left:5%;
+margin-right:5%;
 }
 
 
@@ -29,6 +33,7 @@ body
 	background-color: #537310;
 	overflow:hidden;  
 	letter-spacing: 0.4em;
+	z-index:10;
 }
 
 .nav-container a:link {		text-decoration: none;		color:#FFFFFF;	}
@@ -37,7 +42,7 @@ body
 .nav-container a:active {	text-decoration: underline;	color:#FFFFFF;	}
 
 	
-	.nav-items
+.nav-items
 	{  
 		margin: 0;
 		width: 80%;
@@ -78,15 +83,77 @@ body
 		text-align:right;
 		display: inline;
 	}
-	.nav-icons a{
-	margin:0px;
-	width: 0px;
-	}
+	.nav-icons a{	margin:0px;	width: 0px;	}
 		.nav-icons-logo
 		{  
 			margin-left: auto;
 			max-width: 50px;
 			height: auto;
 		}
-		.nav-icons-logo:hover{	filter: invert(42%) sepia(41%) saturate(3376%) hue-rotate(25deg) brightness(94%) contrast(78%);	}
+		.nav-icons-logo:hover{	filter: invert(57%) sepia(61%) saturate(5794%) hue-rotate(25deg) brightness(93%) contrast(78%);	}
+	
+
+
+
+.art-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  /*padding: 20px 0;*/
+  font-size: 30px;    border-radius: 20px;letter-spacing: 0.4em;
+}
+
+.item {
+  background: #fff;
+  text-align: center;
+  border: 0.5px solid #000
+  text-size:12;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  /*grid-template-areas: 
+    "art-body"
+    "carousel";*/
+}
+
+
+.art-container-items{  
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	/*padding: 0.5rem;*/
+	background: #fff;
+	grid-gap: 20px;
+	}
+
+.carousel {
+  background: #fff;
+  height: 300px;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 100%;
+  margin-right: 20px;
+  background: #fff;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;/*
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;*/
+}
+
+.carousel-cell img {
+width: auto;
+height: 100%;
+}
+
+.art-space{
+height:50px;
 }
