@@ -109,24 +109,22 @@ margin-right:5%;
   text-size:12;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  /*grid-template-areas: 
-    "art-body"
-    "carousel";*/
+  grid-template-rows: 100px 200px 50px 125px 50px;
 }
 
 
 .art-container-items{  
 	display: grid;
+	margin:10%;
 	grid-template-columns: 1fr 1fr 1fr;
 	/*padding: 0.5rem;*/
 	background: #fff;
-	grid-gap: 20px;
+	grid-gap: 10%;
 	}
 
 .carousel {
   background: #fff;
-  height: 300px;
+  height: 200px;
 }
 
 .carousel-cell {
@@ -148,12 +146,34 @@ margin-right:5%;
   font-size: 80px;
   color: white;*/
 }
-
-.carousel-cell img {
-width: auto;
-height: 100%;
+.art-title{
+height:100%;
+width: 100%;
+block-size: fit-content;
+align:center;
 }
+
+.art-link{
+font-size: 16px; position:relative;
+}
+.carousel-cell img {
+width: 80%;
+height: 200px;
+align:center;
+}
+
 
 .art-space{
 height:50px;
+}
+.art-text{
+font-size: 21px;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
