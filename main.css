@@ -1,3 +1,5 @@
+/*flexbox wont work stick to grid*/
+
 
 *{
 box-sizing: border-box;
@@ -27,7 +29,7 @@ body
 	background-color: #537310;
 	overflow:hidden;  
 	letter-spacing: 0.4em;
-	z-index:10;
+	z-index:1;
 }
 
 .nav-container a:link {		text-decoration: none;		color:#FFFFFF;	}
@@ -90,7 +92,7 @@ body
 /*https://coder-coder.com/how-to-fix-css-background-image-not-working/ */
 .header-span
 {
-	margin:25px 0px 25px 0px;
+	margin:25px 0px 200px 0px;
 	display:grid;
 	width:100%;
 	height: 300px;
@@ -117,87 +119,75 @@ body
 			}
 
 
-
-.art-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  /*padding: 20px 0;*/
-  font-size: 30px;    border-radius: 20px;letter-spacing: 0.4em;
-}
-
-.item {
-  background: #fff;
-  text-align: center;
-  border: 0.5px solid #000
-  text-size:12;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 200px 50px 125px 50px;
-}
-
-
-.art-container-items{  
-	display: grid;
-	margin: 2% 10% 2% 10%;
-	grid-template-columns: 1fr 1fr 1fr;
-	/*padding: 0.5rem;*/
-	background: #fff;
-	grid-gap: 10%;
+.art-container{}
+	.art-container > div 
+	{
+	  background-color: rgba(255, 255, 0, 0.8);
+	  text-align: center;
+	  font-size: 30px;
+	  letter-spacing: 0.4em;
 	}
 
-.carousel {
-  background: #fff;
-  height: 200px;
-}
-
-.carousel-cell {
-  width: 66%;
-  height: 100%;
-  margin-right: 20px;
-  background: #fff;
-  border-radius: 5px;
-  counter-increment: gallery-cell;
-
-}
-
-/* cell number */
-.carousel-cell:before {
-  display: block;/*
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;*/
-}
-.art-title{
-height:100%;
-width: 100%;
-block-size: fit-content;
-align:center;
-}
-
-.art-link{
-font-size: 16px; position:relative;
-}
-.carousel-cell img {
-width: 80%;
-height: 200px;
-align:center;
-}
-
-
-.art-space{
-height:50px;
-}
-.art-text{
-font-size: 21px;
-}
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
+	/*https://www.digitalocean.com/community/tutorials/css-align-justify */
+	.art-container-items
+	{    
+		display: grid;
+		margin: 2% 15% 2% 15%;
+		grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+		/*grid-template-columns: 1fr 1fr 1fr;*/
+		background: #fff;
+		grid-gap:5% 5%;
+		justify-content: space-evenly;
+		justify-items: center;		
+	}
+		.item 
+		{
+			background: #fff;
+			text-align: center;
+			border: 0.5px solid #ffffff;
+			text-size:12;
+			display: grid;
+			grid-template-columns: 300px;
+			grid-template-rows: 100px 200px 50px 125px 50px;
+		}
+			.art-title
+			{
+				height:100%;
+				width: 100%;
+				block-size: fit-content;
+				align:center;
+			}
+			.carousel 
+			{
+			  background: #fff;
+			  height: 200px;
+			}
+				.carousel-cell 
+				{
+				  width: 66%;
+				  height: 100%;
+				  margin-right: 10px;
+				  background: #fff;
+				  border-radius: 5px;
+				  counter-increment: gallery-cell;
+				}
+					.carousel-cell img 
+					{
+						width: 80%;
+						height: auto;
+						align:center;
+					}
+				.carousel-cell:before {	display: block;	}
+				.carousel.is-fullscreen .carousel-cell {		height: 100%;		}
+				.carousel.is-fullscreen .carousel-cell-image{	max-width: 100%;	}
+			.art-space	{	height:50px;		}
+			.art-text	{	font-size: 21px;	}
+			.art-link	{	font-size: 16px; position:relative;	}
+				.center {
+					margin: 0;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-ms-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+				}
