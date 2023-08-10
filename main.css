@@ -10,11 +10,11 @@ font-family:"Montserrat","Helvetica","sans-serif";
 
 body
 {
+background-color: #a3ae57;
 }
 
 
-
-.nav-container 
+.nav-container  /*nav bar container. group of items in nav bar: items and icons*/
 {   
 	width: 100%;
 	display: grid;
@@ -38,14 +38,14 @@ body
 .nav-container a:active {	text-decoration: underline;	color:#FFFFFF;	}
 
 
-	.nav-items
+	.nav-items /*text links to other pages*/
 	{  
 		margin: 0;
 		width: 100%;
 		text-align:center;
 		padding:8px;
 	}
-		.select-anim
+		.select-anim /*animation for page group*/
 		{
 			display: inline-block;
 			position: relative;
@@ -69,7 +69,7 @@ body
 			transform: scaleX(1);
 			transform-origin: center;
 		}
-	.nav-icons
+	.nav-icons /*icon links to other sites*/
 	{  
 		margin: 0;
 		margin-top: -5px;
@@ -80,7 +80,7 @@ body
 		display: inline;
 	}
 	.nav-icons a{	margin:0px;	width: 0px;	}
-		.nav-icons-logo
+		.nav-icons-logo /*animation for icon group*/
 		{  
 			margin-left: auto;
 			max-width: 50px;
@@ -119,13 +119,13 @@ body
 			}
 
 
-.art-container{}
+.art-container{}/*art container. group of items in art container items: title, carousel, text, and links*/
 	.art-container > div 
 	{
-	  background-color: rgba(255, 255, 0, 0.8);
 	  text-align: center;
 	  font-size: 30px;
-	  letter-spacing: 0.4em;
+	  letter-spacing: 0.4em;			color: #ffffff;
+
 	}
 
 	/*https://www.digitalocean.com/community/tutorials/css-align-justify */
@@ -135,14 +135,13 @@ body
 		margin: 2% 15% 2% 15%;
 		grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
 		/*grid-template-columns: 1fr 1fr 1fr;*/
-		background: #fff;
 		grid-gap:5% 5%;
 		justify-content: space-evenly;
 		justify-items: center;		
 	}
 		.item 
-		{
-			background: #fff;
+		{	  
+			background-color: rgba(255, 255, 255, 0.2);
 			text-align: center;
 			border: 0.5px solid #ffffff;
 			text-size:12;
@@ -173,8 +172,8 @@ body
 				}
 					.carousel-cell img 
 					{
-						width: 80%;
-						height: auto;
+						width: auto;
+						height: 100%;
 						align:center;
 					}
 				.carousel-cell:before {	display: block;	}
@@ -191,3 +190,4 @@ body
 					-ms-transform: translate(-50%, -50%);
 					transform: translate(-50%, -50%);
 				}
+
