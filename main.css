@@ -92,7 +92,7 @@ background-color: #a3ae57;
 /*https://coder-coder.com/how-to-fix-css-background-image-not-working/ */
 .header-span
 {
-	margin:25px 0px 200px 0px;
+	margin:25px 0px 25px 0px;
 	display:grid;
 	width:100%;
 	height: 300px;
@@ -124,23 +124,22 @@ background-color: #a3ae57;
 	{
 	  text-align: center;
 	  font-size: 30px;
-	  letter-spacing: 0.4em;			color: #ffffff;
-
+	  letter-spacing: 0.4em;
+	  color: #ffffff;
 	}
 
-	/*https://www.digitalocean.com/community/tutorials/css-align-justify */
+	/*https://www.digitalocean.com/community/tutorials/css-align-justify  container auto adjusts depending on screen width*/
 	.art-container-items
 	{    
 		display: grid;
-		margin: 2% 15% 2% 15%;
-		grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
-		/*grid-template-columns: 1fr 1fr 1fr;*/
-		grid-gap:5% 5%;
+		margin: 20px 15% 20px 15%;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-gap: 50px;
 		justify-content: space-evenly;
-		justify-items: center;		
+		justify-items: center;
 	}
 		.item 
-		{	  
+		{	
 			background-color: rgba(255, 255, 255, 0.2);
 			text-align: center;
 			border: 0.5px solid #ffffff;
@@ -148,6 +147,7 @@ background-color: #a3ae57;
 			display: grid;
 			grid-template-columns: 300px;
 			grid-template-rows: 100px 200px 50px 125px 50px;
+			height:100%;
 		}
 			.art-title
 			{
@@ -156,31 +156,35 @@ background-color: #a3ae57;
 				block-size: fit-content;
 				align:center;
 			}
-			.carousel 
+			.carousel /*moving images display by flickity*/
 			{
-			  background: #fff;
 			  height: 200px;
 			}
 				.carousel-cell 
 				{
 				  width: 66%;
 				  height: 100%;
-				  margin-right: 10px;
-				  background: #fff;
-				  border-radius: 5px;
-				  counter-increment: gallery-cell;
+				  margin:0px 10px 0px 10px;
+				  counter-increment: gallery-cell;				
+
 				}
 					.carousel-cell img 
 					{
 						width: auto;
 						height: 100%;
-						align:center;
+						align:center;	
 					}
+				.carousel-cell-image {
+				display: block;
+				max-height: 100%;
+				}
 				.carousel-cell:before {	display: block;	}
 				.carousel.is-fullscreen .carousel-cell {		height: 100%;		}
 				.carousel.is-fullscreen .carousel-cell-image{	max-width: 100%;	}
 			.art-space	{	height:50px;		}
 			.art-text	{	font-size: 21px;	}
+			.art-text-small	{	font-size: 16px;	}
+
 			.art-link	{	font-size: 16px; position:relative;	}
 				.art-link a:link	{		text-decoration: none;			color:#56a3b9;	}
 				.art-link a:visited	{		text-decoration: none;			color:#717d34;	}
@@ -195,3 +199,22 @@ background-color: #a3ae57;
 					transform: translate(-50%, -50%);
 				}
 
+					.dev-container-items
+	{    
+		display: grid;
+		margin: 20px 15% 20px 15%;
+		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+		grid-gap: 50px;
+		justify-content: space-evenly;
+		justify-items: center;
+	}
+			.item-wide
+		{	
+			background-color: rgba(255, 255, 255, 0.2);
+			text-align: center;
+			text-size:12;
+			display: grid;
+			grid-template-columns: 400px;
+			grid-template-rows: 100px 200px 50px 225px 50px;
+			height:100%;
+		}
