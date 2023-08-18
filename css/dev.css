@@ -10,9 +10,7 @@ font-family:"Montserrat","Helvetica","sans-serif";
 
 body
 {
-background-color: #a3ae57;
-  overflow-y: scroll;
-
+background-color: #2f4459;
 }
 
 
@@ -28,7 +26,7 @@ background-color: #a3ae57;
 	margin:auto;
 	padding: 5px;
 	border-bottom: medium ridge #0E2602;
-	background-color: #537310;
+	background-color: #252a12;
 	overflow:hidden;  
 	letter-spacing: 0.4em;
 	z-index:1;
@@ -51,7 +49,7 @@ background-color: #a3ae57;
 		{
 			display: inline-block;
 			position: relative;
-			color: #A6761C;
+			color: #b6c9a9;
 		}
 		.select-anim:after
 		{
@@ -62,7 +60,7 @@ background-color: #a3ae57;
 			height: 2px;
 			bottom: 0;
 			left: 0;
-			background-color: #A6761C;
+			background-color: #b6c9a9;
 			transform-origin: center;
 			transition: transform 0.25s ease-out;
 		}
@@ -88,17 +86,17 @@ background-color: #a3ae57;
 			max-width: 50px;
 			height: auto;
 		}
-		.nav-icons-logo:hover{	filter: invert(57%) sepia(61%) saturate(5794%) hue-rotate(25deg) brightness(93%) contrast(78%);	}
+		.nav-icons-logo:hover{	filter: invert(12%) sepia(76%) saturate(337%) hue-rotate(32deg) brightness(93%) contrast(94%);	}
 
 
-/*https://coder-coder.com/how-to-fix-css-background-image-not-working/ */
+/* https://cssgradient.io/ */
 .header-span
 {
 	margin:25px 0px 25px 0px;
 	display:grid;
 	width:100%;
 	height: 300px;
-	background: #537310 center/100% url('assets/header_voxelart.png') no-repeat;
+	background: #2f4459 center/100% url('../assets/header_dev.jpg') no-repeat;
 }
 	.header-inner-a
 	{
@@ -121,8 +119,8 @@ background-color: #a3ae57;
 			}
 
 
-.art-container{}/*art container. group of items in art container items: title, carousel, text, and links*/
-	.art-container > div 
+.dev-container{}/*art container. group of items in art container items: title, carousel, text, and links*/
+	.dev-container > div 
 	{
 	  text-align: center;
 	  font-size: 30px;
@@ -131,32 +129,30 @@ background-color: #a3ae57;
 	}
 
 	/*https://www.digitalocean.com/community/tutorials/css-align-justify  container auto adjusts depending on screen width*/
-	.art-container-items
+	.dev-container-items
 	{    
 		display: grid;
 		margin: 20px 15% 20px 15%;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
 		grid-gap: 50px;
 		justify-content: space-evenly;
 		justify-items: center;
 	}
-		.item 
+		.item-wide
 		{	
-			background-color: rgba(255, 255, 255, 0.2);
+			background-color: rgba(37, 42, 18, 0.2);
 			text-align: center;
-			border: 0.5px solid #ffffff;
 			text-size:12;
 			display: grid;
-			grid-template-columns: 300px;
-			grid-template-rows: 100px 200px 50px 125px 50px;
+			grid-template-columns: 400px;
+			grid-template-rows: 100px 200px 50px 225px 50px;
 			height:100%;
 		}
-			.art-title
+			.dev-title
 			{
-				height:100%;
-				width: 100%;
-				block-size: fit-content;
-				align:center;
+				text-align:center;
+				position:relative;
+				margin-right: -1em;
 			}
 			.carousel /*moving images display by flickity*/
 			{
@@ -183,15 +179,15 @@ background-color: #a3ae57;
 				.carousel-cell:before {	display: block;	}
 				.carousel.is-fullscreen .carousel-cell {		height: 100%;		}
 				.carousel.is-fullscreen .carousel-cell-image{	max-width: 100%;	}
-			.art-space	{	height:50px;		}
-			.art-text	{	font-size: 21px;	}
-			.art-text-small	{	font-size: 16px;	}
+			.dev-space	{	height:50px;		}
+			.dev-text	{	font-size: 21px;	}
+			.dev-text-small	{	font-size: 16px;	padding: 5%;}
 
-			.art-link	{	font-size: 16px; position:relative;	}
-				.art-link a:link	{		text-decoration: none;			color:#56a3b9;	}
-				.art-link a:visited	{		text-decoration: none;			color:#717d34;	}
-				.art-link a:hover	{		text-decoration: underline;		color:#ffffff;	}
-				.art-link a:active	{		text-decoration: underline;		color:#ffffff;	}
+			.dev-link	{	font-size: 16px; position:relative;	}
+				.dev-link a:link	{		text-decoration: none;			color:#159b47;	}
+				.dev-link a:visited	{		text-decoration: none;			color:#cc7e60;	}
+				.dev-link a:hover	{		text-decoration: underline;		color:#b6c9a9;	}
+				.dev-link a:active	{		text-decoration: underline;		color:#b6c9a9;	}
 				.center {
 					margin: 0;
 					position: absolute;
@@ -203,20 +199,5 @@ background-color: #a3ae57;
 
 	.dev-container-items
 	{    
-		display: grid;
-		margin: 20px 15% 20px 15%;
-		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-		grid-gap: 50px;
-		justify-content: space-evenly;
-		justify-items: center;
+
 	}
-		.item-wide
-		{	
-			background-color: rgba(255, 255, 255, 0.2);
-			text-align: center;
-			text-size:12;
-			display: grid;
-			grid-template-columns: 400px;
-			grid-template-rows: 100px 200px 50px 225px 50px;
-			height:100%;
-		}
