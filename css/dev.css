@@ -133,7 +133,7 @@ background-color: #2f4459;
 	{    
 		display: grid;
 		margin: 20px 15% 20px 15%;
-		grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
 		grid-gap: 50px;
 		justify-content: space-evenly;
 		justify-items: center;
