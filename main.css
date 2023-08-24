@@ -92,13 +92,28 @@ background-color: #a3ae57;
 
 
 /*https://coder-coder.com/how-to-fix-css-background-image-not-working/ */
-.header-span
+.header-span-home
+{
+	margin:25px 0px 25px 0px;
+	display:grid;
+	width:100%;
+	height: 300px;
+}
+.header-span-art
 {
 	margin:25px 0px 25px 0px;
 	display:grid;
 	width:100%;
 	height: 300px;
 	background: #537310 center/100% url('assets/header_voxelart.png') no-repeat;
+}
+.header-span-dev
+{
+	margin:25px 0px 25px 0px;
+	display:grid;
+	width:100%;
+	height: 300px;
+	background: #537310 center/100% url('assets/header_dev.png') no-repeat;
 }
 	.header-inner-a
 	{
@@ -158,11 +173,11 @@ background-color: #a3ae57;
 				block-size: fit-content;
 				align:center;
 			}
-			.carousel /*moving images display by flickity*/
+			.carousel-art /*moving images display by flickity for */
 			{
 			  height: 200px;
 			}
-				.carousel-cell 
+				.carousel-art-cell 
 				{
 				  width: 66%;
 				  height: 100%;
@@ -170,10 +185,10 @@ background-color: #a3ae57;
 				  counter-increment: gallery-cell;				
 
 				}
-					.carousel-cell img 
+					.carousel-art-cell img 
 					{
 						width: auto;
-						height: 100%;z
+						height: 100%;
 						align:center;	
 					}
 				.carousel-cell-image {
@@ -181,7 +196,7 @@ background-color: #a3ae57;
 				max-height: 100%;
 				}
 				.carousel-cell:before {	display: block;	}
-				.carousel.is-fullscreen .carousel-cell {		height: 100%;		}
+				.carousel.is-fullscreen .carousel-art-cell	{	height: 100%;		}
 				.carousel.is-fullscreen .carousel-cell-image{	max-width: 100%;	}
 			.art-space	{	height:50px;		}
 			.art-text	{	font-size: 21px;	}
@@ -201,22 +216,103 @@ background-color: #a3ae57;
 					transform: translate(-50%, -50%);
 				}
 
+/*https://www.digitalocean.com/community/tutorials/css-align-justify  container auto adjusts depending on screen width*/
+
+	.dev-container > div 
+	{
+	  text-align: center;
+	  font-size: 30px;
+	  letter-spacing: 0.4em;
+	  color: #ffffff;
+	}
+	
 	.dev-container-items
 	{    
 		display: grid;
 		margin: 20px 15% 20px 15%;
-		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
 		grid-gap: 50px;
 		justify-content: space-evenly;
 		justify-items: center;
 	}
-		.item-wide
+		.item-wide	/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout */
 		{	
 			background-color: rgba(255, 255, 255, 0.2);
 			text-align: center;
+			border: 0.5px solid #ffffff;
 			text-size:12;
 			display: grid;
-			grid-template-columns: 400px;
-			grid-template-rows: 100px 200px 50px 225px 50px;
-			height:100%;
+			grid-template-columns: 400px 450px;
+			grid-template-rows: 50px 200px 100px 75px;
 		}
+			.dev-title
+			{
+				grid-column-start: 1;	grid-column-end: 3;
+				grid-row-start: 1;		grid-row-end: 2;
+				height:100%;			width: 100%;
+				block-size: fit-content;
+				align:center;
+				position:relative;
+				margin-right: -1em;
+			}
+			.carousel-dev /*moving images display by flickity*/
+			{
+				grid-column-start: 1;	grid-column-end: 2;
+				grid-row-start: 2;		grid-row-end: 6;
+				height: 300px;
+			}
+				.carousel-dev-cell 
+				{
+				  width: auto;
+				  height: 300px;
+				  margin:0px 10px 0px 10px;
+				  counter-increment: gallery-cell;				
+				}
+					.carousel-dev-cell img 
+					{
+						width: auto;
+						height: 300px;
+						align:center;	
+					}
+				.carousel-cell-image {	display: block;	max-height: 100%;	}
+				.carousel-cell:before {	display: block;	}
+				.carousel.is-fullscreen .carousel-cell {		height: 100%;		}
+				.carousel.is-fullscreen .carousel-cell-image{	max-width: 100%;	}
+
+			.dev-text-small	
+			{	
+				grid-column-start: 2;	grid-column-end: 3;
+				grid-row-start: 2;		grid-row-end: 4;
+				font-size: 21px;		position:relative;	padding: 5%;
+			}
+			.center-mid 
+			{
+					margin: 0;
+					position: absolute;
+					top: 50%;
+					-ms-transform: translate(0, -50%);
+					transform: translate(0, -50%);
+			}
+			.dev-link	
+			{	
+				grid-column-start: 2;	grid-column-end: 3;
+				grid-row-start: 4;		grid-row-end: 5;
+				font-size: 16px;		position:relative;	
+			}
+				.dev-link a:link	{		text-decoration: none;			color:#56a3b9;	}
+				.dev-link a:visited	{		text-decoration: none;			color:#717d34;	}
+				.dev-link a:hover	{		text-decoration: underline;		color:#ffffff;	}
+				.dev-link a:active	{		text-decoration: underline;		color:#ffffff;	}
+				.center {
+					margin: 0;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-ms-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+				}
+			.dev-space	
+			{
+				grid-column-start: 1;	grid-column-end: 2;
+				grid-row-start: 4;		grid-row-end: 5;
+			}
