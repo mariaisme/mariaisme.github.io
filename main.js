@@ -4,10 +4,10 @@ document.querySelector('.show-more').addEventListener('click', function() {
   document.querySelectorAll('.rp-details.toggle').forEach(ele => ele.classList.toggle('hidden'))
 });*/
 
-// Refresh the page after a delay of 3 seconds
+/* Refresh the page after a delay of 3 seconds; this works infinitely, have to change in the future
 setTimeout(function(){
 	location.reload();  
-}, 3000);
+}, 3000);*/
 
 setTimeout(()=>{
   // uses HTML5 history API to manipulate the location bar
